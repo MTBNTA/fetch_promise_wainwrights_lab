@@ -36,9 +36,8 @@ const mapWainwrights = (wainwrightsArray) => {
 
 // #3: add info to each element
 const addWainwrightInfoToElement = (wainwrightsData) => {
-    //wainwrightsReturnData.forEach((data) => {
         let wainwrightName = document.createElement("h2");
-        // console.log(data);
+        console.log(data);
         wainwrightName.innerText = data.name;
         wainwrightsList.appendChild(wainwrightName);
 
@@ -48,8 +47,7 @@ const addWainwrightInfoToElement = (wainwrightsData) => {
 
         let wainwrightArea = document.createElement("p");
         wainwrightArea.innerText = "Area name:  " + data.area.areaName;
-        wainwrightsList.appendChild(wainwrightArea);
-   // });   
+        wainwrightsList.appendChild(wainwrightArea);   
 };
 
 // #4: filtering
