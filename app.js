@@ -26,7 +26,7 @@ const mapWainwrights = (wainwrightsArray) => {
     wainwrightsList.innerText = "";
 
     // create li element for each wainwright
-    for (wainwright of wainwrightsArray){
+    for (data of wainwrightsArray){
         let wainwrightsData = document.createElement("li");
 
         addWainwrightInfoToElement(wainwrightsData);
@@ -35,21 +35,21 @@ const mapWainwrights = (wainwrightsArray) => {
 };
 
 // #3: add info to each element
-const addWainwrightInfoToElement = (data) => {
-    wainwrightsReturnData.forEach((data) => {
-        const wainwrightName = document.createElement("li");
-        console.log(data);
+const addWainwrightInfoToElement = (wainwrightsData) => {
+    //wainwrightsReturnData.forEach((data) => {
+        let wainwrightName = document.createElement("h2");
+        // console.log(data);
         wainwrightName.innerText = data.name;
         wainwrightsList.appendChild(wainwrightName);
 
-        const wainwrightHeightMetres = document.createElement("p");
+        let wainwrightHeightMetres = document.createElement("p");
         wainwrightHeightMetres.innerText = "Height in metres: " + data.heightMetres;
         wainwrightsList.appendChild(wainwrightHeightMetres);
 
-        const wainwrightArea = document.createElement("p");
+        let wainwrightArea = document.createElement("p");
         wainwrightArea.innerText = "Area name:  " + data.area.areaName;
         wainwrightsList.appendChild(wainwrightArea);
-    });   
+   // });   
 };
 
 // #4: filtering
